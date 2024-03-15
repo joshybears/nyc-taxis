@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres_db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+      - POSTGRES_DB=nycdata
+    volumes:
+      - ./pgdb:/var/lib/postgresql/pgdata
+    ports:
+      - '5432:5432'
+
