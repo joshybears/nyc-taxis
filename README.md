@@ -34,7 +34,7 @@ Files & Folders:
 - notebooks
   - Contains notebooks for use with Jupyter
 - pgdb
-  - Mount point for postgres DB
+  - Mount point for Postgres DB (generated upon running docker compose)
 - tmp
   - Temporary file storage
 
@@ -58,7 +58,6 @@ In this project, we use Pipenv to install Python dependencies that we need, for 
 1. In the main directory, run the following command (don't forget to change year and month): `pipenv run python etl/get_yellow_taxi_data.py --year <year> --month <month>`
    - STDOUT will show the progress.
    - Supported years: 2015 - 2023 (this is the period that they used the parquet files)
-   - STDOUT will show the progress.
 
 ### View Visualization
 1. In the main directory, run the following command to run jupyter notebook: `pipenv run jupyter notebook`
@@ -68,4 +67,22 @@ In this project, we use Pipenv to install Python dependencies that we need, for 
 
 ## Discussion
 
+### Assumptions
+- We take only the newer file format that the site provides (Parquet), which means files from 2015 onwards
+- We assume the same URL structure for all of the files `https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{date_string}.parquet`
+- We exclude 0 and NaN values for field passenger_count from ingestion
+- Pipeline can be run for the same date multiple times (idempotence)
+  - We detect presence of the table and indexes to make sure it's there before doing any writing (prep_db function)
+  - We use the URL to avoid duplicates, we delete first any entries with the current URL before writing (using append)
+
+### Personal Challenges
+- Choosing technologies
+- IPYNB
+
+### Data & Conclusions
+
 ![Data for 2023 December](/images/viz.png)
+
+Discussion: Insights into your problem-solving process, challenges
+faced, and how you overcame them.
+
