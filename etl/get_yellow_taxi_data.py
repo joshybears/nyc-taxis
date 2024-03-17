@@ -61,9 +61,7 @@ def get_data(url):
     df = df[df['passenger_count'] != 0]
 
     df['url'] = url
-    print(df)
-    print(df.shape)
-    print(df.columns.tolist())
+    print(f'Data retrieved! {df.shape}')
 
     return df
 
@@ -101,6 +99,7 @@ def prep_db(engine, url):
 
 def write_to_db(engine, data):
     data.to_sql('yellow_taxis', con=engine, if_exists='append', index=False)
+    print('Data written successfully!')
 
 if __name__ == '__main__':
 
