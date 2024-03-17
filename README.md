@@ -2,7 +2,21 @@
 
 ## Project Overview
 
-
+### Folder Structure
+```
+nyc-taxis
+├── Pipfile
+├── README.md
+├── docker-compose.yml
+├── etl
+│   └── get_yellow_taxi_data.py
+├── images
+│   └── viz.png
+├── notebooks
+│   └── Yellow-Taxi-Analysis.ipynb
+├── pgdb
+└── tmp
+```
 
 ## Setup Instructions
 
