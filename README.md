@@ -2,6 +2,9 @@
 
 ## Project Overview
 
+### Description
+`nyc-taxis` is a small ETL project that gets data from the NYC Taxi & Limousine Commission website (https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), uploads it onto a Postgres DB, and allows visualization of the data via Jupyter Notebook. 
+
 ### Folder Structure
 ```
 nyc-taxis
