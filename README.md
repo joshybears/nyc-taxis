@@ -29,7 +29,8 @@ In this project, we use Pipenv to install Python dependencies that we need, for 
 ### View Visualization
 1. In the main directory, run the following command to run jupyter notebook: `pipenv run jupyter notebook`
 2. Open file `notebooks/Yellow-Taxi-Analysis.ipynb` using Jupyter
-3. Check the visualization, modify the query dates, modify the chart
+3. Run all the modules, the visualization should appear after some time
+4. Check the visualization, feel free to modify the query dates, modify the chart
 
 ## Discussion
 
