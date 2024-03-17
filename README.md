@@ -20,6 +20,23 @@ nyc-taxis
 ├── pgdb
 └── tmp
 ```
+Files & Folders:
+- Pipfile
+  - Lists out Python dependencies and libraries, for use with Pipenv
+- README.md
+  - Description and directions for the project
+- docker-compose.yml
+  - Lists out services to be run with Docker
+- etl
+  - Contains ingestion scripts
+- images
+  - Contains images for embed in GH repo
+- notebooks
+  - Contains notebooks for use with Jupyter
+- pgdb
+  - Mount point for postgres DB
+- tmp
+  - Temporary file storage
 
 ## Setup Instructions
 
