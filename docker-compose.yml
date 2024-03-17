@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=postgres123
       - POSTGRES_DB=nycdata
     volumes:
-      - ./pgdb:/var/lib/postgresql/pgdata
+      - ./pgdb:/var/lib/postgresql/data
     ports:
       - '5432:5432'
 
