@@ -31,3 +31,5 @@ In this project, we use Pipenv to install Python dependencies that we need, for 
 2. Open file `notebooks/Yellow-Taxi-Analysis.ipynb` using Jupyter
 
 ## Discussion
+
+![Data for 2023 December](/images/viz.png)
