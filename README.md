@@ -74,15 +74,25 @@ In this project, we use Pipenv to install Python dependencies that we need, for 
 - Pipeline can be run for the same date multiple times (idempotence)
   - We detect presence of the table and indexes to make sure it's there before doing any writing (prep_db function)
   - We use the URL to avoid duplicates, we delete first any entries with the current URL before writing (using append)
+- We have to use a date filter when getting data, because some files contain dates not from that month
 
 ### Personal Challenges
 - Choosing technologies
-- IPYNB
+  - I found it challenging to choose which technologies would be appropriate for this project, because there are so many ways to do things. Ultimately stuck with what I know/commonly use and what could stand on its own, although I can think of other possible more sophisticated platforms and solutions for this exercise.
+- Unfamiliarity with Jupyter graphs & plots
+  - I learned a bit of Jupyter graphing/plotting during my time with Eskwelabs (Data Science Bootcamp), but I can't say I'm super proficient with it. Had to go back, reread lessons, and consult online resources to relearn how to do pandas/matplotlib graphing.
 
 ### Data & Conclusions
 
+See below graph for sum of total amount per day (using pickup time as the effective date):
+
 ![Data for 2023 December](/images/viz.png)
 
-Discussion: Insights into your problem-solving process, challenges
-faced, and how you overcame them.
+Looking at the data, we can see peak ridership during latter half of the weekdays (Wed-Fri) during the first two weeks of December (Dec 6, 7, 8; Dec 13, 14, 15). Total amounts add up to almost 4 million for these dates.
+However the numbers go way down during the holiday season, with Dec 25 recording the lowest value at just 1.2M. Days adjacent to Christmas and New Year's Eve follow this.
+With more analysis, I am sure many more interesting points and trends can be seen.
+
+See below table for an ordered list of sums of total amounts per date:
+
+![Biggest total amounts for 2023 December](/images/max_amounts.png)
 
